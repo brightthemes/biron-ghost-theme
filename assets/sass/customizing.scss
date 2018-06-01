@@ -113,6 +113,11 @@
 // Pagination
 .pagination {
   margin: 2 * $spacing auto;
+
+  &-link {
+    padding-left: $spacing;
+    padding-right: $spacing;
+  }
 }
 
 // Iconn
@@ -169,11 +174,27 @@
 
 // Footer
 .footer {
+  padding: 2 * $spacing 1.5 * $spacing 2 * $spacing;
   &-link-title {
     margin-bottom: $spacing;
   }
 
   .navbar-item {
     padding: 0;
+    margin-bottom: $spacing/4;
   }
+
+  .form-group, .footer-text {
+    margin-bottom: $spacing;
+  }
+}
+
+// Social Link
+.social-link {
+  display: flex;
+  margin-bottom: $spacing/2;
+
+  .icon { margin-right: $spacing/2; }
+
+  p { line-height: 25px; }
 }

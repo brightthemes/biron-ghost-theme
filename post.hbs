@@ -1,0 +1,35 @@
+{{!< default}}
+
+{{#post}}
+<section class="hero background-img is-large" style="background-image: url('{{img_url feature_image}}')">
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title has-text-white is-size-1 has-text-weight-bold">
+        {{title}}
+      </h1>
+      <p class="has-text-white has-text-weight-bold is-size-3">{{author.name}}</p>
+    </div>
+  </div>
+</section>
+
+<section class="posts">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="post">
+          {{#if tags}}
+            <div class="post-tags">
+              {{#foreach tags limit="3"}}
+                <a class="button tag-{{slug}} is-rounded" href="{{url}}" title="{{name}}" aria-label="{{name}}s">#{{name}}</a>
+              {{/foreach}}
+            </div>
+          {{/if}}
+          {{content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{/post}}
+
