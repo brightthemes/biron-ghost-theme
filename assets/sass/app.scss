@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-// Customizing
-@import "customizing";
+// Settings
+@import "settings";
 
 // Utilities
 @import "node_modules/bulma/sass/utilities/_all";
@@ -20,3 +20,6 @@
 
 // Layout
 @import "node_modules/bulma/sass/layout/_all";
+
+// Customizing
+@import "customizing";

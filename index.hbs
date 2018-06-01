@@ -1,32 +1,31 @@
 {{!< default}}
 
-<section class="hero is-primary is-medium" style="background-image: url('{{@blog.cover_image}}')">
-  <!-- Hero head: will stick at the top -->
-  <div class="hero-head">
-    {{!-- The blog navigation links --}}
-    {{> header}}
-  </div>
-
+<section class="hero background-img is-medium" style="background-image: url('{{@blog.cover_image}}')">
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title">
+      <h1 class="title has-text-white">
         {{@blog.title}}
       </h1>
-      <h2 class="subtitle">
+      <h2 class="subtitle has-text-white">
         {{@blog.description}}
       </h2>
     </div>
   </div>
 </section>
 
-<div class="container">
-	{{!-- Last Post --}}
-  <div class="columns is-multiline">
-    {{#foreach posts }}
-      <div class="column is-12-mobile is-6-tablet is-4-widescreen is-6-desktop">
-        {{> post-card}}
-      </div>
-    {{/foreach}}
+<section class="posts">
+  <div class="container">
+    {{!-- Latest Posts --}}
+    <div class="columns is-multiline">
+      {{#foreach posts }}
+        <div class="column is-12-mobile is-6-tablet is-4-widescreen is-6-desktop">
+          {{> post-card}}
+        </div>
+      {{/foreach}}
+
+      {{pagination}}
+    </div>
   </div>
-</div>
+</section>
+

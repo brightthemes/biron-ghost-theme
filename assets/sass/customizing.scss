@@ -1,3 +1,179 @@
-// Colors
-$primary: #599EED;
-$link: #FFBC8C;
+// Global classes
+.background-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.has-text-weight-extra-bold {
+  font-weight: $font-weight-extra-bold;
+}
+
+// Navbar
+.header {
+  position: absolute;
+  width: 100%;
+
+  .navbar {
+    background: transparent;
+
+    &-menu .navbar-item {
+      color: $white;
+      font-weight: $weight-semibold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Hero
+.hero {
+  position: relative;
+  margin-bottom: 2 * $spacing;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, $primary, $secondary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    mix-blend-mode: multiply;
+  }
+
+  &-body {
+    .title, .subtitle {
+      position: relative;
+      z-index: 5;
+    }
+
+    .title {
+      margin-bottom: $spacing;
+    }
+  }
+}
+
+.posts {
+  padding: $spacing;
+}
+
+// Post Card
+.post-card {
+  position: relative;
+  border-radius: $radius;
+
+  &:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: $grey-lighter;
+  }
+
+  &.has-border {
+    padding: $spacing;
+    border: 1px solid $grey-lighter;
+
+    &:after { display: none; }
+  }
+
+  .item-link {
+    display: block;
+    position: relative;
+  }
+
+  figure {
+    margin-bottom: $spacing;
+    border-radius: $radius;
+  }
+
+  .item-featured {
+    position: absolute;
+    padding: $spacing/2;
+    top: 10px;
+    right: 10px;
+    background-color: rgba($black, 0.75);
+    border-radius: $radius-rounded;
+
+    .icon {
+      color: $primary;
+    }
+  }
+
+  .item-description { margin-bottom: $spacing; }
+
+  .item-tags {
+    margin-bottom: $spacing;
+  }
+
+  .level { margin-bottom: $spacing; }
+}
+
+// Pagination
+.pagination {
+  margin: 2 * $spacing auto;
+}
+
+// Iconn
+.icon {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  stroke-width: 2px;
+  fill: none;
+
+  &--sm {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--lg {
+    width: 30px;
+    height: 30px;
+  }
+
+  &--xl {
+    width: 40px;
+    height: 40px;
+  }
+
+  &--2x {
+    width: 50px;
+    height: 50px;
+  }
+
+  &--3x {
+    width: 75px;
+    height: 75px;
+  }
+
+  &--4x {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__svg {
+    fill: inherit;
+    background: inherit;
+    stroke: currentcolor;
+    stroke-width: inherit;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transform: translateX(0);
+  }
+}
+
+// Footer
+.footer {
+  &-link-title {
+    margin-bottom: $spacing;
+  }
+
+  .navbar-item {
+    padding: 0;
+  }
+}

@@ -1,63 +1,34 @@
-{{!-- <div class="card">
-  {{#if feature_image}}
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img class="lazyload" src="{{img_url feature_image}}" alt="{{title}}">
-    </figure>
-  </div>
-  {{/if}}
-  <div class="card-content">
-    <h2 class="title has-text-weight-bold"><a class="has-text-black" href="{{url}}">{{title}}</a></h1>
-    <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="{{author.feature_img}}" alt="{{author}}">
-        </figure>
+<div class="item post-card{{#unless feature_image}} has-border{{/unless}}">
+  <a class="item-link" href="{{url}}">
+    {{#if feature_image}}
+      <figure class="image lazyload is-2by1 item-figure background-img" style="background-image:url({{img_url feature_image}})" alt="{{title}}">
+      </figure>
+    {{/if}}
+    {{#if featured}}
+      <div class="item-featured">
+        {{> icon data-name="star"}}
       </div>
-      <div class="media-content">
-        <p class="title is-4">{{author}}</p>
-        <p class="subtitle is-6">{{author.twitter}}</p>
-      </div>
+    {{/if}}
+  </a>
+  {{#if tags}}
+    <div class="item-tags">
+      {{#foreach tags limit="3"}}
+        <a class="button tag-{{slug}} is-rounded" href="{{url}}" title="{{name}}" aria-label="{{name}}s">#{{name}}</a>
+      {{/foreach}}
     </div>
-
-    <div class="content">
-      {{excerpt words="26"}}&hellip;
-      <br>
-      {{#if tags}}
-        {{#foreach tags limit="3"}}
-          <a class="tag tag-{{slug}} is-primary is-medium" href="{{url}}" title="{{name}}" aria-label="{{name}}s">#{{name}}</a>
-        {{/foreach}}
-      {{/if}}
+  {{/if}}
+  <h2 class="title item-title is-size-4 has-text-weight-extra-bold"><a class="item-link" href="{{url}}">{{title}}</a></h2>
+  {{#unless feature_image}}
+    <div class="item-description">
+      {{excerpt words="40"}}&hellip;
+    </div>
+  {{/unless}}
+  <div class="level">
+    <div class="level-left">
+      <div class="item-author">{{author}}</div>
+    </div>
+    <div class="level-right">
       <time datetime="{{date format='YYYY-MM-DD'}}">{{date published_at}}</time>
     </div>
   </div>
-</div> --}}
-
-
-<div class="item">
-  <a class="item-link" href="{{url}}">
-    {{#if feature_image}}
-      <figure class="image lazyload is-2by1 item-figure" style="background-image:url({{img_url feature_image}})" alt="{{title}}">
-        {{!-- <img class="lazyload" src="{{img_url feature_image}}" alt="{{title}}"> --}}
-      </figure>
-    {{/if}}
-
-    <div class="item-content">
-      <h2 class="title item-title" style="color: ">Flow</h2>
-      <div class="level">
-        <div class="level-left">
-          <div class="item-author">
-          </div>
-        </div>
-        <div class="level-right">
-          <div class="tags has-addons">
-            <div class="item-category tag">Kit</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-description">
-        <p>Flow is our own internal library which allows us to easily create detailed wireframes,…</p>
-      </div>
-    </div>
-  </a>
 </div>
