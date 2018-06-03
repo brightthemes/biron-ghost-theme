@@ -1,3 +1,52 @@
+// Headings
+h1 {
+  font-size: 2.5rem;
+	font-size: calc( ( 1rem * 1.6 ) + 0.8vw);
+	font-weight: 700;
+	line-height: 1.2;
+  margin: 0 0 ($spacing * 0.5);
+}
+
+h2 {
+  font-size: 2rem;
+	font-size: calc( ( 1rem * 1.3 ) + 0.8vw);
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 0 0 ($spacing * 0.6);
+}
+
+h3 {
+  font-size: 1.8rem;
+	font-size: calc( ( 1rem * 1 ) + 0.8vw);
+	font-weight: 700;
+	line-height: 1.25;
+	margin: 0 0 ($spacing * 0.7);
+}
+
+h4 {
+  font-size: 1.5rem;
+	font-size: calc( ( 1rem * 0.9 ) + 0.7vw);
+	font-weight: 700;
+	line-height: 1.25;
+	margin: 0 0 ($spacing * 0.8);
+}
+
+h5 {
+	font-size: 1.25rem;
+	font-size: calc( ( 1rem * 0.9 ) + 0.5vw);
+	font-weight: 700;
+	line-height: 1.3;
+	margin: 0 0 ($spacing * 0.9);
+}
+
+h6 {
+  font-size: 1rem;
+	font-size: calc( ( 1rem * 0.9 ) + 0.3vw);
+	font-weight: 700;
+	line-height: 1.3;
+	margin: 0 0 ($spacing * 1);
+}
+
 // Global classes
 .background-img {
   background-size: cover;
@@ -42,6 +91,8 @@
   }
 
   &-body {
+    padding: 5rem 1.5rem;
+
     &:after {
       position: absolute;
       content: "";
@@ -209,4 +260,43 @@
   .icon { margin-right: $spacing/2; }
 
   p { line-height: 25px; }
+}
+
+// Post
+
+.post-tags {
+  max-width: 600px;
+	margin: 0 auto;
+}
+
+.kg-card-markdown,
+.kg-post {
+	max-width: 600px;
+	margin: 0 auto;
+  padding: $spacing 0;
+  font-size: 1.2rem;
+
+  p, blockquote, pre, ul, ol, dl {
+    margin-bottom: 1.5 * $spacing;
+    font-size: inherit;
+    color: $black;
+  }
+
+  blockquote {
+    padding: 1em;
+    border-left: 3px solid $primary;
+    background-color: rgba($primary, 0.1);
+  }
+
+  blockquote p {
+    margin: 0;
+  }
+
+  ul, ol {
+    margin-left: 1em;
+  }
+
+  ul {
+    list-style: circle;
+  }
 }
