@@ -13,11 +13,11 @@
   </div>
 </section>
 
-<section class="posts">
+<section class="post">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <div class="post">
+        <div class="post-content">
           {{#if tags}}
             <div class="post-tags">
               {{#foreach tags limit="3"}}
@@ -27,9 +27,14 @@
           {{/if}}
           {{content}}
         </div>
+        {{> disqus}}
       </div>
     </div>
   </div>
 </section>
+
+{{!-- Related posts --}}
+{{> related-posts}}
+
 {{/post}}
 

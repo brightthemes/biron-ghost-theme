@@ -125,7 +125,7 @@ h6 {
   position: relative;
   border-radius: $radius;
 
-  &:after {
+  &.bottom-border:after {
     position: absolute;
     content: "";
     right: 0;
@@ -138,7 +138,7 @@ h6 {
     padding: $spacing;
     border: 1px solid $grey-lighter;
 
-    &:after { display: none; }
+    &.bottom-border:after { display: none; }
   }
 
   .item-link {
@@ -274,7 +274,7 @@ h6 {
 	max-width: 600px;
 	margin: 0 auto;
   padding: $spacing 0;
-  font-size: 1.2rem;
+  // font-size: 1.2rem;
 
   p, blockquote, pre, ul, ol, dl {
     margin-bottom: 1.5 * $spacing;
@@ -299,4 +299,10 @@ h6 {
   ul {
     list-style: circle;
   }
+}
+
+.related-posts {
+  padding: 2em 0;
+  background-color: $footer-background-color;
+  border-bottom: 2px solid $white;
 }
