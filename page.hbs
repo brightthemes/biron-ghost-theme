@@ -8,35 +8,20 @@
       <h1 class="title has-text-white is-size-1 has-text-weight-bold">
         {{title}}
       </h1>
-      {{#primary_author}}
-        <a href="{{url}}" class="has-text-light has-text-weight-bold is-size-3">{{name}}</a>
-      {{/primary_author}}
     </div>
   </div>
 </section>
 
-<section class="post">
+<section class="page">
   <div class="container">
     <div class="columns">
       <div class="column">
         <div class="post-content">
-          {{#if tags}}
-            <div class="post-tags">
-              {{#foreach tags limit="3"}}
-                <a class="button tag-{{slug}} is-rounded" href="{{url}}" title="{{name}}" aria-label="{{name}}s">#{{name}}</a>
-              {{/foreach}}
-            </div>
-          {{/if}}
           {{content}}
         </div>
-        {{> disqus}}
       </div>
     </div>
   </div>
 </section>
 
-{{!-- Related posts --}}
-{{> related-posts}}
-
 {{/post}}
-

@@ -58,6 +58,12 @@ h6 {
   font-weight: $font-weight-extra-bold;
 }
 
+// Link
+a { transition: color .2s ease; }
+a:hover {
+  color: $primary;
+}
+
 // Navbar
 .header {
   position: absolute;
@@ -70,6 +76,11 @@ h6 {
       color: $white;
       font-weight: $weight-semibold;
       text-transform: uppercase;
+
+      &:hover {
+        background-color: transparent;
+        color: $primary;
+      }
     }
   }
 }
@@ -77,7 +88,6 @@ h6 {
 // Hero
 .hero {
   position: relative;
-  margin-bottom: 2 * $spacing;
 
   &:after {
     position: absolute;
@@ -92,26 +102,12 @@ h6 {
 
   &-body {
     padding: 5rem 1.5rem;
-
-    &:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(to bottom right, $primary, $secondary);
-      mix-blend-mode: multiply;
-      // opacity: 0.8;
-    }
-
-    .title, .subtitle {
-      position: relative;
-      z-index: 5;
-    }
+    position: relative;
+    z-index: 5;
 
     .title {
-      margin-bottom: $spacing;
+      margin-bottom: $spacing/2;
+      font-weight: $font-weight-extra-bold!important;
     }
   }
 }
@@ -263,6 +259,9 @@ h6 {
 }
 
 // Post
+.post, .page {
+  padding-top: 2 * $spacing;
+}
 
 .post-tags {
   max-width: 600px;
@@ -274,7 +273,8 @@ h6 {
 	max-width: 600px;
 	margin: 0 auto;
   padding: $spacing 0;
-  // font-size: 1.2rem;
+
+  a { text-decoration: underline; }
 
   p, blockquote, pre, ul, ol, dl {
     margin-bottom: 1.5 * $spacing;
@@ -302,7 +302,7 @@ h6 {
 }
 
 .related-posts {
-  padding: 2em 0;
+  padding: 2em 1em;
   background-color: $footer-background-color;
   border-bottom: 2px solid $white;
 }
