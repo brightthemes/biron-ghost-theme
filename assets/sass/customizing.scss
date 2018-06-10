@@ -47,6 +47,10 @@ h6 {
 	margin: 0 0 ($spacing * 1);
 }
 
+a {
+  transition: color .2s ease;
+}
+
 // Global classes
 .background-img {
   background-size: cover;
@@ -56,12 +60,6 @@ h6 {
 
 .has-text-weight-extra-bold {
   font-weight: $font-weight-extra-bold;
-}
-
-// Link
-a { transition: color .2s ease; }
-a:hover {
-  color: $primary;
 }
 
 // Navbar
@@ -109,11 +107,15 @@ a:hover {
       margin-bottom: $spacing/2;
       font-weight: $font-weight-extra-bold!important;
     }
+
+    .subtitle {
+      margin: $spacing 0!important;
+    }
   }
 }
 
 .posts {
-  padding: $spacing;
+  padding: 2* $spacing $spacing;
 }
 
 // Post Card
@@ -265,16 +267,24 @@ a:hover {
 
 .post-tags {
   max-width: 600px;
-	margin: 0 auto;
+  margin: 0 auto;
+  padding: 0 $spacing;
 }
 
 .kg-card-markdown,
 .kg-post {
 	max-width: 600px;
 	margin: 0 auto;
-  padding: $spacing 0;
+  padding: $spacing;
 
-  a { text-decoration: underline; }
+  // Link
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: $primary;
+    }
+  }
 
   p, blockquote, pre, ul, ol, dl {
     margin-bottom: 1.5 * $spacing;
@@ -299,6 +309,10 @@ a:hover {
   ul {
     list-style: circle;
   }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .related-posts {
@@ -306,3 +320,185 @@ a:hover {
   background-color: $footer-background-color;
   border-bottom: 2px solid $white;
 }
+
+// Comments
+.comments {
+	max-width: 600px;
+	margin: 0 auto;
+  padding: $spacing;
+  padding-top: 0;
+}
+
+// Lazyload
+.lazyload {
+  opacity: 0;
+}
+
+.lazyload.loaded {
+  opacity: 1;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.initial.loaded {
+  opacity: 1;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+// Prism setup
+.post-content .tag, .post-content .number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
+}
+
+// Prism
+/* PrismJS 1.14.0
+http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+markup-templating+handlebars */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+   color: black;
+   background: none;
+   text-shadow: 0 1px white;
+   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+   text-align: left;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   word-wrap: normal;
+   line-height: 1.5;
+
+   -moz-tab-size: 4;
+   -o-tab-size: 4;
+   tab-size: 4;
+
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+ }
+
+ pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+   text-shadow: none;
+   background: #b3d4fc;
+ }
+
+ pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+ code[class*="language-"]::selection, code[class*="language-"] ::selection {
+   text-shadow: none;
+   background: #b3d4fc;
+ }
+
+ @media print {
+   code[class*="language-"],
+   pre[class*="language-"] {
+     text-shadow: none;
+   }
+ }
+
+ /* Code blocks */
+ pre[class*="language-"] {
+   padding: 1em;
+   margin: 1em 0;
+   overflow: auto;
+ }
+
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+   background: #f5f2f0;
+ }
+
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+   padding: .1em;
+   border-radius: .3em;
+   white-space: normal;
+ }
+
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+   color: slategray;
+ }
+
+ .token.punctuation {
+   color: #999;
+ }
+
+ .namespace {
+   opacity: .7;
+ }
+
+ .token.property,
+ .token.tag,
+ .token.boolean,
+ .token.number,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+   color: #905;
+ }
+
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+   color: #690;
+ }
+
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string {
+   color: #9a6e3a;
+   background: hsla(0, 0%, 100%, .5);
+ }
+
+ .token.atrule,
+ .token.attr-value,
+ .token.keyword {
+   color: #07a;
+ }
+
+ .token.function,
+ .token.class-name {
+   color: #DD4A68;
+ }
+
+ .token.regex,
+ .token.important,
+ .token.variable {
+   color: #e90;
+ }
+
+ .token.important,
+ .token.bold {
+   font-weight: bold;
+ }
+ .token.italic {
+   font-style: italic;
+ }
+
+ .token.entity {
+   cursor: help;
+ }
+
+

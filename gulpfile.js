@@ -45,10 +45,8 @@ gulp.task('fonts', function() {
 gulp.task('scripts', function() {
   return gulp
     .src([
-      npm_src   + 'lunr/lunr.js',
       npm_src   + 'vanilla-lazyload/dist/lazyload.js',
       npm_src   + 'fitvids/fitvids.js',
-      asset_src + 'js/scripts/ghostHunter.js',
       asset_src + 'js/scripts/prism.js',
       asset_src + 'js/scripts/script.js'
     ])
