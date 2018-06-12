@@ -5,6 +5,11 @@
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
+        {{#if profile_image}}
+          <figure class="author-image image is-128x128" style="background-image: url({{img_url profile_image}})">
+            <img src="">
+          </figure>
+        {{/if}}
         <h1 class="title has-text-white is-size-1 has-text-weight-bold">
           {{name}}
         </h1>

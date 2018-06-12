@@ -70,14 +70,20 @@ a {
   .navbar {
     background: transparent;
 
-    &-menu .navbar-item {
-      color: $white;
-      font-weight: $weight-semibold;
-      text-transform: uppercase;
+    &-menu {
+      .navbar-item {
+        color: $white;
+        font-weight: $weight-semibold;
+        text-transform: uppercase;
 
-      &:hover {
-        background-color: transparent;
-        color: $primary;
+        &:hover {
+          background-color: transparent;
+          color: $primary;
+        }
+      }
+
+      &.is-active {
+        .navbar-item { color: $dark; }
       }
     }
   }
@@ -137,6 +143,8 @@ a {
     border: 1px solid $grey-lighter;
 
     &.bottom-border:after { display: none; }
+
+    .level { margin-bottom: 0; }
   }
 
   .item-link {
@@ -162,13 +170,22 @@ a {
     }
   }
 
+  .item-title { margin-bottom: 1rem; }
+
   .item-description { margin-bottom: $spacing; }
 
   .item-tags {
     margin-bottom: $spacing;
   }
 
-  .level { margin-bottom: $spacing; }
+  .level {
+    display: flex;
+    margin-bottom: $spacing;
+
+    &-right {
+      margin-top: 0;
+    }
+  }
 }
 
 // Pagination
@@ -265,10 +282,17 @@ a {
   padding-top: 2 * $spacing;
 }
 
-.post-tags {
+.post-tags,
+.social-share {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 $spacing;
+}
+
+.social-share p {
+  display: inline-flex;
+  margin-right: $spacing/2;
+  padding: 0.375em 0;
 }
 
 .kg-card-markdown,
@@ -357,6 +381,14 @@ a {
   white-space: inherit;
   background: inherit;
   margin: inherit;
+}
+
+.author-image {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
 }
 
 // Prism
