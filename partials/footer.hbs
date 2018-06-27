@@ -2,16 +2,16 @@
   <div class="container">
     <div class="columns">
       <div class="column is-4">
-        <p class="footer-link-title has-text-weight-bold">Navigation</p>
+        <p class="footer-link-title has-text-weight-bold">{{t "Navigation"}}</p>
         {{navigation}}
       </div>
       <div class="column is-4">
-        <p class="footer-link-title has-text-weight-bold">Follow Us</p>
+        <p class="footer-link-title has-text-weight-bold">{{t "Follow Us"}}</p>
         {{> social-media}}
       </div>
       <div class="column is-4">
-        <p class="footer-link-title has-text-weight-bold">Subscribe</p>
-        <p class="footer-text">Join our newsletter.</p>
+        <p class="footer-link-title has-text-weight-bold">{{t "Subscribe"}}</p>
+        <p class="footer-text">{{t "Get the latest posts delivered right to your inbox" }}</p>
         {{subscribe_form
           placeholder="Your email address"
           form_class=""
