@@ -1,0 +1,30 @@
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-4">
+        <p class="footer-link-title has-text-weight-bold">{{t "Navigation"}}</p>
+        {{navigation}}
+      </div>
+      <div class="column is-4">
+        <p class="footer-link-title has-text-weight-bold">{{t "Follow Us"}}</p>
+        {{> social-media}}
+      </div>
+      <div class="column is-4">
+        <p class="footer-link-title has-text-weight-bold">{{t "Subscribe"}}</p>
+        <p class="footer-text">{{t "Get the latest posts delivered right to your inbox" }}</p>
+        {{subscribe_form
+          placeholder="Your email address"
+          form_class=""
+          input_class="input is-rounded"
+          button_class="button is-primary is-rounded has-text-weight-bold"
+        }}
+      </div>
+    </div>
+    <hr>
+    <div class="footer-bottom has-text-centered">
+      &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>.
+      Published with <a href="https://ghost.org">Ghost</a>.
+      Theme by <a href="https://bironthemes.com">Biron Themes</a>.
+    </div>
+  </div>
+</footer>

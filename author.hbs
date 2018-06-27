@@ -1,0 +1,37 @@
+{{!< default}}
+
+{{#author}}
+  <section class="hero background-img is-large" style="background-image: url('{{cover_image}}')">
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        {{#if profile_image}}
+          <figure class="author-image image is-128x128" style="background-image: url({{img_url profile_image}})">
+            <img src="">
+          </figure>
+        {{/if}}
+        <h1 class="title has-text-white is-size-1 has-text-weight-bold">
+          {{name}}
+        </h1>
+        <h2 class="subtitle has-text-white">
+          {{description}}
+        </h2>
+      </div>
+    </div>
+  </section>
+{{/author}}
+
+<section class="posts">
+  <div class="container">
+    {{!-- Latest Posts --}}
+    <div class="columns is-multiline">
+      {{#foreach posts }}
+        <div class="column is-12-mobile is-6-tablet is-4-widescreen is-6-desktop">
+          {{> post-card class="bottom-border"}}
+        </div>
+      {{/foreach}}
+    </div>
+
+    {{pagination}}
+  </div>
+</section>

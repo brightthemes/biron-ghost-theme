@@ -1,0 +1,27 @@
+{{!< default}}
+
+{{#post}}
+<section class="hero background-img is-large" style="background-image: url('{{img_url feature_image}}')">
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title has-text-white is-size-1 has-text-weight-bold">
+        {{title}}
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="post-content">
+          {{content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/post}}

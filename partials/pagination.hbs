@@ -1,0 +1,12 @@
+{{!-- Pagination --}}
+<nav class="pagination is-rounded  is-centered" role="navigation" aria-label="pagination">
+  <ul class="pagination-list">
+    {{#if prev}}
+      <li><a class="pagination-previous has-text-weight-bold" href="{{page_url prev}}">{{t "Newer Posts"}}</a></li>
+    {{/if}}
+      <li><a class="pagination-link button has-text-weight-bold is-primary">{{t "Page {page} of {pages}" page=page pages=pages}}</a></li>
+    {{#if next}}
+      <li><a class="pagination-next has-text-weight-bold" href="{{page_url next}}">{{t "Older Posts"}}</a></li>
+    {{/if}}
+  </ul>
+</nav>

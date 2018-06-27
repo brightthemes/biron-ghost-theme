@@ -1,0 +1,43 @@
+{{!< default}}
+
+{{#post}}
+<section class="hero background-img is-large" style="background-image: url('{{img_url feature_image}}')">
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title has-text-white is-size-1 has-text-weight-bold">
+        {{title}}
+      </h1>
+      {{#primary_author}}
+        <a href="{{url}}" class="has-text-light is-size-4">{{name}}</a>
+      {{/primary_author}}
+    </div>
+  </div>
+</section>
+
+<section class="post">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="post-content">
+          {{#if tags}}
+            <div class="post-tags">
+              {{#foreach tags limit="3"}}
+                <a class="button tag-{{slug}} is-rounded" href="{{url}}" title="{{name}}" aria-label="{{name}}s">#{{name}}</a>
+              {{/foreach}}
+            </div>
+          {{/if}}
+          {{content}}
+        </div>
+        {{> social-share}}
+        {{> disqus}}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{!-- Related posts --}}
+{{> related-posts}}
+
+{{/post}}
+

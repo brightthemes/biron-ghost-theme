@@ -1,0 +1,28 @@
+{{!-- Post/Page share icons --}}
+<div class="social-share">
+  {{!-- twitter --}}
+  <p class="is-hidden-mobile">{{t "Share this"}}</p>
+  <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute='true'}}"
+      onclick="window.open(this.href, 'twitter-share', 'width=580, height=296'); return false;"
+      title="Share on Twitter" aria-label="{{t 'Share on'}} Twitter" tabindex="-1"
+      class="button is-rounded social-share__item twitter">
+      Twitter
+    {{!-- {{>icon data-name="twitter" data-size="small"}} --}}
+  </a>
+  {{!-- facebook --}}
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute='true'}}"
+      onclick="window.open(this.href, 'facebook-share', 'width=580, height=296'); return false;"
+      title="Share on Facebook" aria-label="{{t 'Share on'}} Facebook" tabindex="-1"
+      class="button is-rounded social-share__item facebook">
+      Facebook
+    {{!-- {{>icon data-name="facebook" data-size="small"}} --}}
+  </a>
+  {{!-- Linkedin --}}
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url}}/&amp;title={{encode title}}"
+      onclick="window.open(this.href, 'facebook-share', 'width=580, height=296'); return false;"
+      title="Share on Linkedin" aria-label="{{t 'Share on'}} Linkedin" tabindex="-1"
+      class="button is-rounded social-share__item linkedin">
+      Linkedin
+    {{!-- {{>icon data-name="linkedin" data-size="small"}} --}}
+  </a>
+</div>
