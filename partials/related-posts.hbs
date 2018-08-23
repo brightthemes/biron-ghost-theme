@@ -1,5 +1,5 @@
 {{!-- Related Posts --}}
-{{#get "posts" include="tags,author" limit="3" filter="id:-{{id}}+tag:{{primary_tag.slug}}" as |related|}}
+{{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tag:{{primary_tag.slug}}" as |related|}}
   <section class="related-posts">
     <div class="container">
       <h4 class="has-text-centered">{{t "You might also like"}}</h4>

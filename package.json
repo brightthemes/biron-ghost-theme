@@ -1,12 +1,16 @@
 {
   "name": "biron",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Minimal & Clean Ghost Blog Theme",
   "author": {
     "name": "Biron Themes",
     "email": "bironthemes@gmail.com"
   },
-  "private": true,
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
   "config": {
     "posts_per_page": 12
   },

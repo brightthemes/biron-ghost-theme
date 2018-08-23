@@ -295,8 +295,9 @@ a {
   padding: 0.375em 0;
 }
 
-.kg-card-markdown,
-.kg-post {
+// .kg-card-markdown,
+.kg-post,
+.post-content__inner {
 	max-width: 720px;
 	margin: 0 auto;
   padding: $spacing;
@@ -336,6 +337,72 @@ a {
 
   p:last-of-type {
     margin-bottom: 0;
+  }
+}
+
+// Koenig editor styles
+.kg-embed-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: $spacing 0 2*$spacing;
+  min-width: 100%;
+
+  figcaption {
+    margin: $spacing/2 0 0;
+    color: rgba($black, 0.6);
+  }
+
+  .fluid-width-video-wrapper {
+    margin: 0;
+  }
+}
+
+.kg-image-card {
+  margin: 0 0 $spacing;
+  figcaption {
+    margin: 0 0 $spacing;
+    text-align: center;
+    color: rgba($black, 0.6);
+  }
+}
+
+.kg-image-wide, .kg-image-full,
+.kg-width-wide, .kg-width-full {
+  max-width: calc(100% + 2*#{$spacing});
+  margin-left: -$spacing;
+  margin-right: -$spacing;
+}
+
+@media only screen and (min-width: 769px) {
+  .kg-image-wide,
+  .kg-width-wide {
+    max-width: calc(100% + 4*#{$spacing});
+    margin-left: -2*$spacing;
+    margin-right: -2*$spacing;
+  }
+
+  .kg-image-full,
+  .kg-width-full {
+    max-width: calc(100% + 8*#{$spacing});
+    margin-left: -4*$spacing;
+    margin-right: -4*$spacing;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .kg-image-wide,
+  .kg-width-wide {
+    max-width: calc(100% + 6*#{$spacing});
+    margin-left: -3*$spacing;
+    margin-right: -3*$spacing;
+  }
+
+  .kg-image-full,
+  .kg-width-full {
+    max-width: calc(100% + 16*#{$spacing});
+    margin-left: -8*$spacing;
+    margin-right: -8*$spacing;
   }
 }
 
