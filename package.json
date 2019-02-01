@@ -1,21 +1,16 @@
 {
   "name": "biron",
-  "version": "1.1.0",
   "description": "Minimal & Clean Ghost Blog Theme",
+  "demo": "https://biron.bironthemes.com",
+  "version": "1.2.0",
+  "engines": {
+    "ghost": ">=2.0.0",
+    "ghost-api": "v2"
+  },
   "author": {
     "name": "Biron Themes",
-    "email": "bironthemes@gmail.com"
-  },
-  "keywords": [
-    "ghost",
-    "theme",
-    "ghost-theme"
-  ],
-  "config": {
-    "posts_per_page": 12
-  },
-  "engines": {
-    "ghost": ">=1.0.0"
+    "email": "bironthemes@gmail.com",
+    "url": "https://bironthemes.com"
   },
   "gpm": {
     "type": "theme",
@@ -25,15 +20,23 @@
       "Clean"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.24.4",
-    "cssnano": "^3.10.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.8",
     "fs": "0.0.1-security",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
@@ -59,7 +62,30 @@
     "feather-icons": "^4.7.3",
     "fitvids": "^2.0.0",
     "lunr": "^2.2.1",
-    "npm": "^6.1.0",
+    "npm": "^6.7.0",
     "vanilla-lazyload": "^8.7.1"
+  },
+  "config": {
+    "posts_per_page": 12,
+    "image_sizes": {
+      "xxs": {
+        "width": 30
+      },
+      "xs": {
+        "width": 100
+      },
+      "s": {
+        "width": 300
+      },
+      "m": {
+        "width": 600
+      },
+      "l": {
+        "width": 1000
+      },
+      "xl": {
+        "width": 2000
+      }
+    }
   }
 }
