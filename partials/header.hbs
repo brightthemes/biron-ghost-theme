@@ -2,11 +2,11 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-white is-size-4 has-text-weight-bold" href="{{@blog.url}}">
-          {{#if @blog.logo}}
-            <img src="{{@blog.logo}}" alt="{{@blog.title}}">
+        <a class="navbar-item has-text-white is-size-4 has-text-weight-bold" href="{{@site.url}}">
+          {{#if @site.logo}}
+            <img src="{{@site.logo}}" alt="{{@site.title}}">
           {{else}}
-            {{@blog.title}}
+            {{@site.title}}
           {{/if}}
         </a>
         <span role="button" tabindex="0" class="navbar-burger burger has-text-white" data-target="navbar-menu">
