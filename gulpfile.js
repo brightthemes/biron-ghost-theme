@@ -41,8 +41,8 @@ gulp.task('fonts', function() {
 gulp.task('scripts', function() {
   return gulp
     .src([
-      npm_src   + 'vanilla-lazyload/dist/lazyload.js',
-      npm_src   + 'fitvids/fitvids.js',
+      npm_src   + 'vanilla-lazyload/dist/lazyload.min.js',
+      npm_src   + 'fitvids/dist/fitvids.min.js',
       asset_src + 'js/scripts/prism.js',
       asset_src + 'js/scripts/script.js'
     ])
@@ -122,20 +122,3 @@ gulp.task('default',
     'watch'
   ),
 );
-
-// // Watch for changes in files
-// gulp.task('watch', function() {
-//   // Watch .js files
-//   gulp.watch(asset_src + 'js/scripts/*.js', ['scripts']);
-//   // Watch .scss files
-//   gulp.watch(asset_src + 'sass/*.scss', ['sass']);
-//   // Watch app.min.css
-//   gulp.watch(asset_src + 'css/app.min.css', ['browsersync:reload']);
-//   // Watch app.min.js
-//   gulp.watch(asset_src + 'js/app.min.js', ['browsersync:reload']);
-//   // Watch .hbs files
-//   gulp.watch('**/*.hbs', ['browsersync:reload']);
-// });
-
-// // Default Task
-// gulp.task('default', ['fonts', 'sass', 'scripts', 'watch', 'browsersync']);

@@ -59,7 +59,7 @@ a {
 }
 
 .has-text-weight-extra-bold {
-  font-weight: $font-weight-extra-bold;
+  font-weight: 800;
 }
 
 // Navbar
@@ -112,7 +112,7 @@ a {
 
     .title {
       margin-bottom: $spacing/2;
-      font-weight: $font-weight-extra-bold!important;
+      font-weight: 800!important;
     }
 
     .subtitle {
@@ -437,6 +437,112 @@ a {
 .kg-gallery-image:not(:first-of-type) {
   margin: 0 0 0 $spacing/2;
 }
+
+
+/* Bookmark Style */
+.kg-bookmark-card {
+  background: $white;
+  width: 100%;
+  margin: 0;
+  margin-bottom: $spacing;
+}
+
+.kg-card + .kg-bookmark-card {
+  margin-top: 0;
+}
+
+.kg-bookmark-container {
+  display: flex;
+  text-decoration: none;
+  min-height: 148px;
+  box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.09);
+  border-radius: $radius;
+}
+
+.kg-bookmark-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: start;
+  padding: 20px;
+}
+
+.kg-bookmark-title {
+  font-size: 1.1rem;
+  font-weight: $weight-bold;
+}
+
+.kg-bookmark-container:hover {
+  text-decoration: none!important;
+}
+
+.kg-bookmark-container:hover .kg-bookmark-title {
+  color: $primary;
+}
+
+.kg-bookmark-description {
+  display: -webkit-box;
+  color: $grey;
+  margin-top: 12px;
+  max-height: 48px;
+  overflow-y: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.kg-bookmark-thumbnail {
+  position: relative;
+  min-width: 33%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.kg-bookmark-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 3px 3px 0;
+  margin: 0;
+}
+
+.kg-bookmark-metadata {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $grey;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.kg-bookmark-icon {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  margin-right: 8px;
+}
+
+.kg-bookmark-author {
+  font-size: 1rem;
+}
+
+.kg-bookmark-author:after {
+  content: "•";
+  margin: 0 6px;
+}
+
+.kg-bookmark-publisher {
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 240px;
+}
+
 
 .related-posts {
   padding: 2em 1em;
