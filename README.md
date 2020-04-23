@@ -3,7 +3,7 @@
 Biron is a Free Ghost Theme based on [Bulma](https://bulma.io/)
 By [Biron Themes](https://bironthemes.com)
 
-Ghost 2.0 ready!
+Ghost 3.0 ready but the Membership feature is not yet integrated.
 
 [Details](https://bironthemes.com/themes/biron-ghost/)
 
