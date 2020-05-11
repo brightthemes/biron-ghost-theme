@@ -12,3 +12,5 @@ Ghost 3.0 ready but the Membership feature is not yet integrated.
 [Documentation](https://bironthemes.com/docs/biron-ghost/)
 
 ![Screenshot](https://github.com/bironthemes/biron-ghost-theme/raw/master/demo.jpg)
+
+### More [Ghost Themes](https://bironthemes.com)
