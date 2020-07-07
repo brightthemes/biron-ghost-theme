@@ -62,7 +62,7 @@
     "feather-icons": "^4.22.1",
     "fitvids": "^2.0.0",
     "lunr": "^2.3.6",
-    "npm": "^6.9.2",
+    "npm": "^6.14.6",
     "vanilla-lazyload": "^8.17.0"
   },
   "config": {
