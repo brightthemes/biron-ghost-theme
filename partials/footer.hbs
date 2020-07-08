@@ -12,19 +12,20 @@
       <div class="column is-4">
         <p class="footer-link-title has-text-weight-bold">{{t "Subscribe"}}</p>
         <p class="footer-text">{{t "Get the latest posts delivered right to your inbox" }}</p>
-        {{subscribe_form
-          placeholder="Your email address"
-          form_class=""
-          input_class="input is-rounded"
-          button_class="button is-primary is-rounded has-text-weight-bold"
-        }}
+        {{#if @labs.members}}
+          <form class="subscribe-form" data-members-form="subscribe">
+            <input class="input is-rounded" aria-labelledby="footer-subscribe" data-members-email type="email" placeholder="email@example.com" required/>
+            <button class="button is-primary is-rounded has-text-weight-bold" type="submit" title="{{t "Subscribe"}}" aria-label="{{t "Subscribe"}}">
+              {{t "Subscribe"}}
+            </button>
+          </form>
+        {{/if}}
       </div>
     </div>
     <hr>
     <div class="footer-bottom has-text-centered">
       &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a>.
-      Published with <a href="https://ghost.org">Ghost</a>.
-      Theme by <a href="https://bironthemes.com">Biron Themes</a>.
+      Published with <a href="https://ghost.org">Ghost</a> & <a href="https://bironthemes.com/themes/biron-ghost/">Biron</a>.
     </div>
   </div>
 </footer>
