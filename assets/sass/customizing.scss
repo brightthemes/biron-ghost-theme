@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Headings
 h1 {
   font-size: 2.5rem;
@@ -111,7 +113,7 @@ a {
     z-index: 5;
 
     .title {
-      margin-bottom: $spacing/2;
+      margin-bottom: math.div($spacing, 2);
       font-weight: 800!important;
     }
 
@@ -160,7 +162,7 @@ a {
 
   .item-featured {
     position: absolute;
-    padding: $spacing/2;
+    padding: math.div($spacing, 2);
     top: 10px;
     right: 10px;
     background-color: rgba($black, 0.75);
@@ -260,7 +262,7 @@ a {
 
   .navbar-item {
     padding: 0;
-    margin-bottom: $spacing/4;
+    margin-bottom: math.div($spacing, 4);
   }
 
   .form-group, .footer-text {
@@ -271,9 +273,9 @@ a {
 // Social Link
 .social-link {
   display: flex;
-  margin-bottom: $spacing/2;
+  margin-bottom: math.div($spacing, 2);
 
-  .icon { margin-right: $spacing/2; }
+  .icon { margin-right: math.div($spacing, 2); }
 
   p { line-height: 25px; }
 }
@@ -292,7 +294,7 @@ a {
 
 .social-share p {
   display: inline-flex;
-  margin-right: $spacing/2;
+  margin-right: math.div($spacing, 2);
   padding: 0.375em 0;
 }
 
@@ -350,7 +352,7 @@ a {
   min-width: 100%;
 
   figcaption {
-    margin: $spacing/2 0 0;
+    margin: math.div($spacing, 2) 0 0;
     color: rgba($black, 0.6);
   }
 
@@ -431,11 +433,11 @@ a {
 }
 
 .kg-gallery-row:not(:first-of-type) {
-  margin: $spacing/2 0 0 0;
+  margin: math.div($spacing, 2) 0 0 0;
 }
 
 .kg-gallery-image:not(:first-of-type) {
-  margin: 0 0 0 $spacing/2;
+  margin: 0 0 0 math.div($spacing, 2);
 }
 
 

@@ -9,7 +9,7 @@ const opacity = require('postcss-opacity');
 const pseudoelements = require('postcss-pseudoelements');
 const vmin = require('postcss-vmin');
 const willChange = require('postcss-will-change');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('cssnano');
 const zindex = require('postcss-zindex');
 const removeComments = require('postcss-discard-comments');
@@ -41,7 +41,7 @@ gulp.task('fonts', function() {
 gulp.task('scripts', function() {
   return gulp
     .src([
-      npm_src   + 'vanilla-lazyload/dist/lazyload.min.js',
+      npm_src   + 'lazysizes/lazysizes.min.js',
       npm_src   + 'fitvids/dist/fitvids.min.js',
       asset_src + 'js/scripts/prism.js',
       asset_src + 'js/scripts/script.js'
@@ -55,10 +55,6 @@ gulp.task('scripts', function() {
 // Css processors
 var processors = [
   removeComments,
-  cssnext({
-    browsers:'>2%, last 10 version',
-    warnForDuplicates: false
-  }),
   zindex,
   willChange,
   colorRgbaFallback,

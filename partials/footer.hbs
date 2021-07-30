@@ -12,14 +12,12 @@
       <div class="column is-4">
         <p class="footer-link-title has-text-weight-bold">{{t "Subscribe"}}</p>
         <p class="footer-text">{{t "Get the latest posts delivered right to your inbox" }}</p>
-        {{#if @labs.members}}
-          <form class="subscribe-form" data-members-form="subscribe">
-            <input class="input is-rounded" aria-labelledby="footer-subscribe" data-members-email type="email" placeholder="email@example.com" required/>
-            <button class="button is-primary is-rounded has-text-weight-bold" type="submit" title="{{t "Subscribe"}}" aria-label="{{t "Subscribe"}}">
-              {{t "Subscribe"}}
-            </button>
-          </form>
-        {{/if}}
+        <form class="subscribe-form" data-members-form="subscribe">
+          <input class="input is-rounded" aria-labelledby="footer-subscribe" data-members-email type="email" placeholder="email@example.com" required/>
+          <button class="button is-primary is-rounded has-text-weight-bold" type="submit" title="{{t "Subscribe"}}" aria-label="{{t "Subscribe"}}">
+            {{t "Subscribe"}}
+          </button>
+        </form>
       </div>
     </div>
     <hr>

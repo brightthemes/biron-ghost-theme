@@ -11,11 +11,6 @@ var callback = function(){
   // =======
   fitvids();
 
-  // ================
-  // Lazy load images
-  // ================
-  lazyLoad = newLazyLoad();
-
   // ===========
   // Navbar Menu
   // ===========
@@ -131,30 +126,6 @@ function isInViewport(el) {
     (top + height) > window.pageYOffset &&
     (left + width) > window.pageXOffset
   );
-}
-
-// =================
-// Lazyload function
-// =================
-function newLazyLoad() {
-  return new LazyLoad({
-    elements_selector: ".lazyload",
-    class_loading: "loading",
-    class_loaded: "loaded",
-    treshold: 100,
-    callback_enter: function(el) {
-      // addClass('.lazyload', 'loading');
-      el.classList.add('loading');
-    },
-    callback_set: function(el) {
-      el.classList.remove('loading');
-      el.classList.add('loaded');
-    }
-  });
-}
-
-function updateLazyLoad(lazyLoad) {
-  lazyLoad.update();
 }
 
 // ==================
