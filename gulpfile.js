@@ -6,7 +6,7 @@ const postcss = require('gulp-postcss');
 const cssnext = require('postcss-cssnext');
 const colorRgbaFallback = require('postcss-color-rgba-fallback');
 const opacity = require('postcss-opacity');
-const pseudoelements = require('postcss-pseudoelements');
+// const pseudoelements = require('postcss-pseudoelements');
 const vmin = require('postcss-vmin');
 const willChange = require('postcss-will-change');
 const sass = require('gulp-sass')(require('sass'));
@@ -59,7 +59,7 @@ var processors = [
   willChange,
   colorRgbaFallback,
   opacity,
-  pseudoelements,
+  // pseudoelements,
   vmin,
   cssnano
 ];
